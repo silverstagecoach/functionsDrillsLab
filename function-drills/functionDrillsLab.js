@@ -376,13 +376,18 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 function ascendingCheck(array1) {
+  let returnTruth = true;
   array1.forEach(element => {
-    if (array1[element] < array1[element + 1]) {
-      return true;
-    } else if (array1[element >= array1[element + 1]]) {
-      return false;
+    for (let i = 0; i < array1.length; i++) {
+      if (array1[i] < array1[i + 1]) {
+        returnTruth = true;
+      } else {
+        returnTruth = false;
+        break;
+      }
     }
   });
+  return returnTruth;
 }
 
 let arrayIsAscending = ascendingCheck(sampleArray);
