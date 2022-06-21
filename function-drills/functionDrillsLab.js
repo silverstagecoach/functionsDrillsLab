@@ -366,7 +366,8 @@ console.log(totalFrogs)
 //CODE HERE
 const buyFrogs2 = gold => Math.floor(gold/3);
 
-let totalFrogs2 = buyFrogs(80);
+let totalFrogs2 = buyFrogs2(80);
+console.log(totalFrogs2)
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -377,16 +378,13 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 //CODE HERE
 function ascendingCheck(array1) {
   let returnTruth = true;
-  array1.forEach(element => {
     for (let i = 0; i < array1.length; i++) {
       if (array1[i] < array1[i + 1]) {
         returnTruth = true;
       } else {
-        returnTruth = false;
-        break;
+        return false;
       }
     }
-  });
   return returnTruth;
 }
 
@@ -414,13 +412,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = [`duck`]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = [`rubberDuck`, `sailorDuck`, `duck`]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = [`sailorDuck`, `duck`]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = [`realDuck`, `duck`]
